@@ -1,0 +1,19 @@
+4a
+A=[(10,-20,30), (11,22,33), (45,-90,78)]
+B=tuple(filter(lambda x:all(i>0 for i in x),A))
+print(B)
+
+4b
+n=int(input('Enter no. of students -> '))
+Student_dict={}
+for i in range(n):
+    print('Enter the details of student ',i+1)
+    name = input('Name -> ')
+    roll_no = input('Roll No.-> ')
+    marks = float(input('Marks -> '))
+    Student_dict[roll_no] = {'Name':name, 'Marks':marks}
+highest = max(Student_dict.items(),key=lambda x:x[1]['Marks'])
+print('Details of highest scorer')
+print('Name ', highest[1]['Name'])
+print('Roll No', highest[0])
+print('Marks ', highest[1]['Marks'])

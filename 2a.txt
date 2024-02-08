@@ -1,0 +1,26 @@
+2a.
+sent=input('Enter a sentence')
+v=c=0
+p="`~!@#$%^&*()_-+=[]{}|\;'/.,:'?><"
+vow='aeiou'
+dig='0123456789'
+for i in sent.lower():
+    if i not in p:
+        if i not in dig:
+            if i in vow:
+                v+=1
+            else:
+                c+=1
+print('Vowels= ',v)
+print('Consonants= ',c)
+
+2b.
+n=int(input('Enter a no.-> '))
+s=0   
+for i in range(1,n+1): #starting from 1 and going till n
+    if(n%i==0):
+        s=s+1
+if(s==2):
+    print('Prime No.')
+else:
+    print('Not Prime No.')

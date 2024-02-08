@@ -1,0 +1,19 @@
+5a
+def sum_digits(n):
+    s=0
+    while(n!=0):
+        s=s+n%10
+        n=n//10
+    return s
+a=int(input('Enter a no.-> '))
+print('Sum of digits is-> ',sum_digits(a))
+
+5b
+def gcd(a,b):
+    while(a%b!=0):
+        g=a%b
+        a=b
+        b=g
+    return b
+a,b = map(int(input('Enter two no.s -> ').split(' ')))
+print('GCD of  ',a,'and',b,'is',gcd(a,b))
